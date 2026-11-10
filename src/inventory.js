@@ -21,3 +21,10 @@ const products = [
     category: 'Accessories',
   },
 ]
+
+function getProductByID(id) {
+  return products.find((product) => product.id === id)
+}
+
+console.log(getProductByID(2)) // Output: { id: 2, name: 'iPhone 16', price: 899, quantity: 5, category: 'Smartphones' }
+console.log(getProductByID(99)) // Output: undefined
